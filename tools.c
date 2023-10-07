@@ -1,12 +1,12 @@
 #include "shell.h"
-void freearray2D(char **arr)
+void freearray(char **arr)
 {
-int i;
+int n;
 if (!arr)
 return ;
-for (i = 0; arr[i]; i++)
+for (n = 0; arr[n]; n++)
 {
-free (arr[i]), arr[i] = NULL;
+free (arr[n]), arr[n] = NULL;
 }
 free (arr), arr = NULL;
 }
