@@ -22,7 +22,7 @@ exit(0);
 }
 else
 {
-waitpid(fils, $status, 0);
+waitpid(fils, status, 0);
 freearray(command);
 }
 return (status);

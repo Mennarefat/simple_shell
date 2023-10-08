@@ -8,7 +8,11 @@
 #include <sys/wait.h>
 #include <errno.h>
 #include <fcntl.h>
-define DELIM "\t\n"
+#define DELIM "\t\n"
+
+extern char **environ;
+
+
 char **tokenizer(char *ligne);
 char *lire_ligne(void);
 char *_strdup(const char *str);
@@ -18,4 +22,6 @@ char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 void freearray(char **arr);
 int executer(char **command, char **argv);
+char *getenvi(char *variable);
+
 #endif
