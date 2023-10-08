@@ -8,9 +8,6 @@
 #include <sys/wait.h>
 #include <errno.h>
 #include <fcntl.h>
-
-
-
 define DELIM "\t\n"
 char **tokenizer(char *ligne);
 char *lire_ligne(void);
@@ -20,6 +17,5 @@ int _strlen(char *s);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 void freearray(char **arr);
-int executer(char **command , char **argv);
-
-#endif 
+int executer(char **command, char **argv);
+#endif

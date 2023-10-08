@@ -1,9 +1,16 @@
 #include "shell.h"
+/**
+**tokenizer-checks that ligne is not NULL
+*
+*@ligne:array of string
+*
+*Return:a pointer to an array of strings or NULL on failure
+*/
 char *tokenizer(char *ligne)
 {
 char *token = NULL, tmp = NULL;
 char **command = NULL;
-int cpt = 0, i = 0;
+int cpt = 0, n = 0;
 if (!ligne)
 return (NULL);
 tmp = _strdup(ligne);
@@ -27,11 +34,11 @@ return (NULL);
 token = strtok(ligne, DELIM);
 while (token)
 {
-command[i] = _strdup(token);
+command[n] = _strdup(token);
 token = strtok(NULL, DELIM);
-i++;
+n++;
 }
 free(ligne), ligne = NULL;
-command[i] = NULL;
+command[n] = NULL;
 return (command);
 }
