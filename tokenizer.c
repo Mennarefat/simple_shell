@@ -6,7 +6,7 @@
 *
 *Return:a pointer to an array of strings or NULL on failure
 */
-char *tokenizer(char *ligne)
+char **tokenizer(char *ligne)
 {
 char *token = NULL, tmp = NULL;
 char **command = NULL;
@@ -17,14 +17,16 @@ tmp = _strdup(ligne);
 token = strtok(tmp, DELIM);
 if (token == NULL)
 free(ligne), ligne = NULL;
-free(tmp), tmp = NULL;
+free(tmp);
+tmp = NULL;
 return (NULL);
 while (token)
 {
 cpt++;
 token = strtok(NULL, DELIM);
 }
-free(tmp), tmp = NULL;
+free(tmp);
+tmp = NULL;
 command = malloc(sizeof(char *) * (cpt + 1));
 if (!command)
 {

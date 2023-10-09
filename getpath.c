@@ -5,7 +5,7 @@
 *
 *Return:NULL
 */
-char *_getpath(char *command)
+char *getpath(char *command)
 {
 char *path_envi, *f_cmd, *dir;
 int i;
@@ -19,14 +19,14 @@ return (_strdup(command));
 return (NULL);
 }
 }
-path_envi = _getenvi("PATH");
+path_envi = getenvi("PATH");
 if (!path_envi)
 return (NULL);
 dir = strtok(path_envi, ":");
 while (dir)
 {
-f_cmd = malloc(_strlen(dir) + _strlen(command) + 2)
-if (s_cmd)
+f_cmd = malloc(_strlen(dir) + _strlen(command) + 2);
+if (f_cmd)
 {
 _strcpy(f_cmd, dir);
 _strcat(f_cmd, "/");
