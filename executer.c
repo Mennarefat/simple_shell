@@ -15,7 +15,7 @@ int status;
 f_cmd = _getpath(command[0]);
 if (!f_cmd)
 {
-printerror(argv[0], command[0], int idx);
+printerror(argv[0], command[0], idx);
 freearray(command);
 return (127);
 }
@@ -30,7 +30,7 @@ freearray(command);
 }
 else
 {
-waitpid(fils, status, 0);
+waitpid(fils,&status, 0 );
 freearray(command);
 free(f_cmd), f_cmd = NULL;
 }

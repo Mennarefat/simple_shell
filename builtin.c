@@ -31,7 +31,7 @@ void handle_builtin(char **command, char **argv, int *status, int idx)
 if (_strcmp(command[0], "exit") == 0)
 exit_shell(command, argv, status, idx);
 else if (_strcmp(command[0], "env") == 0)
-print_env(command, status);
+print_envi(command, status);
 
 }
 /**
@@ -48,7 +48,7 @@ int exit_value = (*status);
 char *index, mssg[] = ": exit Illegal number: ";
 if (command[1])
 {
-if (is_positive_number(command[1]))
+if ((command[1]))
 {
 exit_value = _atoi(command[1]);
 }
