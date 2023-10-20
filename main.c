@@ -8,7 +8,7 @@
 */
 int main(int ac, char **argv)
 {
-char *line = NULL, **command = NULL;
+char *ligne = NULL, **command = NULL;
 int status = 0, idx = 0;
 (void) ac;
 while (1)

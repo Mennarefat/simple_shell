@@ -9,6 +9,8 @@
 #include <errno.h>
 #include <fcntl.h>
 #define DELIM "\t\n"
+
+struct  state;
 extern char **environ;
 char **tokenizer(char *ligne);
 char *lire_ligne(void);
